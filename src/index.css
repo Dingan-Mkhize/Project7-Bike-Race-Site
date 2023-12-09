@@ -1,13 +1,42 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+  font-family: 'SpritzAndDelicious';
+  src: url('./fonts/SpritzAndDelicious_PERSONAL_USE_ONLY.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hero-font {
+  font-family: 'SpritzAndDelicious', sans-serif;
 }
+
+.custom-font {
+  font-family: 'AmericanCaptain', sans-serif; /* Use the font family name defined above */
+}
+
+body {
+  background-color: #000300;
+}
+
+/* Add these styles to your global styles or a separate stylesheet */
+.countdown-container {
+  margin-top: 20px;
+}
+
+.countdown-text {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.live-now-text {
+  font-size: 2rem;
+  color: #00df9a;
+  font-weight: bold;
+}
+
+
