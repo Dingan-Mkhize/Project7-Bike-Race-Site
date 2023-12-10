@@ -25,14 +25,14 @@ const Photo = () => {
           </div>
           <div className="text-white text-lg leading-7 mt-6 max-md:max-w-full">
             Experience the thrill of the Boulder Bike Tour and challenge
-            yourself on April 1, 2020.
+            yourself on April 1, 2024.
           </div>
           <div className="flex gap-4 mt-6 mb-3.5 pt-4">
-            <button className="border-2 border-[#fff] hover:bg-yellow-500 w-[200px] rounded-full font-bold px-3 py-3 text-white flex items-center justify-center">
+            <button className="transition duration-300 border-2 border-[#fff] hover:bg-yellow-500 w-[200px] rounded-full font-bold px-3 py-3 text-white flex items-center justify-center">
               Register
             </button>
 
-            <button className="border-2 border-[#fff] hover:bg-yellow-500 w-[200px] rounded-full font-bold px-3 py-3 text-white flex items-center justify-center">
+            <button className="transition duration-300 border-2 border-[#fff] hover:bg-yellow-500 w-[200px] rounded-full font-bold px-3 py-3 text-white flex items-center justify-center">
               Learn More
             </button>
           </div>

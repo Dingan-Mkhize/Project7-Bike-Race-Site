@@ -19,6 +19,10 @@
   font-family: 'AmericanCaptain', sans-serif; /* Use the font family name defined above */
 }
 
+.custom-bg {
+  background-color: rgb(160, 64, 8); /* Replace #your-color with your desired color */
+}
+
 body {
   background-color: #000300;
 }

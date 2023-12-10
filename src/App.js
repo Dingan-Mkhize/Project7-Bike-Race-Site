@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 //import Newsletter from './components/Newsletter';
 import Photo from './components/Photos';
+import Riders from './components/Riders';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Navbar />
       <Hero />
       <Photo />
-      
+      <Riders />
     </div>
   );
 }
