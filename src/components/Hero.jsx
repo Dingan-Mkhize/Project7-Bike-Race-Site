@@ -78,7 +78,7 @@ const Hero = () => {
             loop
           />
         </div>
-        <p className="md:text-2xl text-xl hero-font font-bold text-green-700">
+        <p className="md:text-2xl text-xl hero-font font-bold text-[#a04008]">
           Come and join us for an exciting race through the scenic streets of
           Boulder
         </p>

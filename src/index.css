@@ -23,10 +23,6 @@
   background-color: rgb(160, 64, 8); /* Replace #your-color with your desired color */
 }
 
-body {
-  background-color: #000300;
-}
-
 /* Add these styles to your global styles or a separate stylesheet */
 .countdown-container {
   margin-top: 20px;

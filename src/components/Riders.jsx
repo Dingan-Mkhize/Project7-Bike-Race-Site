@@ -93,23 +93,18 @@ const Riders = () => {
                   style={{ borderRadius: "10px" }}
                 />
                 <div className="flex flex-col p-6 items-start max-md:px-5">
-                  <div className="items-stretch flex gap-4">
-                    <button className="text-black text-sm font-semibold leading-5 whitespace-nowrap items-stretch bg-zinc-100 aspect-[1.9655172413793103] justify-center px-2 py-1 rounded-3xl">
-                      Riders
-                    </button>
-                    <button className="text-black text-sm font-semibold leading-5 whitespace-nowrap items-stretch bg-zinc-100 aspect-[1.9655172413793103] justify-center px-2 py-1 rounded-3xl">
-                      Learn More
-                    </button>
-                  </div>
                   <div className="self-stretch text-black text-2xl font-bold leading-9 mt-4">
                     {rider.name} - {rider.location}
                   </div>
                   <div className="self-stretch text-black text-base leading-6 mt-2">
                     {rider.description}
                   </div>
-                  <div className="justify-center items-stretch flex gap-2 mt-6 px-4">
-                    <button className="transition duration-300 text-black text-sm font-semibold leading-5 whitespace-nowrap items-stretch bg-zinc-100 aspect-[1.9655172413793103] justify-center px-2 py-1 rounded-3xl">
-                      Button
+                  <div className="flex justify-center items-center gap-4 mt-6">
+                    <button className="transition duration-300 text-black text-lg font-semibold leading-6 whitespace-nowrap items-stretch bg-gray-200 border-2 border-black px-4 py-2 rounded-3xl hover:border-white hover:bg-yellow-500 hover:text-white">
+                      Contact
+                    </button>
+                    <button className="transition duration-300 text-black text-lg font-semibold leading-6 whitespace-nowrap items-stretch bg-gray-200 border-2 border-black px-4 py-2 rounded-3xl hover:border-white hover:bg-yellow-500 hover:text-white">
+                      Learn More
                     </button>
                   </div>
                 </div>
@@ -122,7 +117,7 @@ const Riders = () => {
           <button
             className={`mx-2 px-4 py-2 rounded-full ${
               currentPage === 1
-                ? "bg-gray-300 border-2 border-black"
+                ? "bg-gray-300 text-[#a04008] border-2 border-[#a04008]"
                 : "bg-[#a04008] text-white border-2 border-white"
             }`}
             onClick={() => handlePageChange(currentPage - 1)}
@@ -142,7 +137,7 @@ const Riders = () => {
           <button
             className={`mx-2 px-4 py-2 rounded-full ${
               currentPage === totalPages
-                ? "bg-gray-300 border-2 border-black"
+                ? "bg-gray-300 text-[#a04008] border-2 border-[#a04008]"
                 : "bg-[#a04008] text-white border-2 border-white"
             }`}
             onClick={() => handlePageChange(currentPage + 1)}

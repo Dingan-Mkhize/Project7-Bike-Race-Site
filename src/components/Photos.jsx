@@ -13,7 +13,7 @@ const Photo = () => {
     <>
       <div className="bg-yellow-500 items-stretch flex flex-col justify-center px-16 py-12 max-md:px-5">
         <div
-          className="bg-opacity-50 flex flex-col mt-16 mb-10 pl-16 pr-20 py-12 border-solid border-black items-start max-md:max-w-full max-md:mr-1 max-md:mt-10 max-md:px-5 rounded-3xl"
+          className="flex flex-col mt-16 mb-10 pl-16 pr-20 py-12 border-solid border-black items-start max-md:max-w-full max-md:mr-1 max-md:mt-10 max-md:px-5 rounded-3xl"
           style={{
             backgroundImage: `url(${bikemountain})`,
             backgroundSize: "cover", // Adjust this property
