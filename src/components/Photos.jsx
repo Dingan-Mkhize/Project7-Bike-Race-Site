@@ -23,9 +23,8 @@ const Photo = () => {
           <div className="text-black text-5xl font-bold hero-font leading-[58px] w-[768px] max-w-full mt-3.5 max-md:text-4xl max-md:leading-[54px]">
             Join the Exciting Bike Race
           </div>
-          <div className="text-white text-lg leading-7 mt-6 max-md:max-w-full">
-            Experience the thrill of the Boulder Bike Tour and challenge
-            yourself on April 1, 2024.
+          <div className="text-white text-lg leading-7 mt-6 max-md:max-w-full hero-font">
+            Experience the thrill of the Boulder Bike Race.
           </div>
           <div className="flex gap-4 mt-6 mb-3.5 pt-4">
             <button className="transition duration-300 border-2 border-[#fff] hover:bg-yellow-500 w-[200px] rounded-full font-bold px-3 py-3 text-white flex items-center justify-center">
@@ -43,7 +42,7 @@ const Photo = () => {
         <div className="text-black text-center text-5xl font-bold hero-font leading-[58px] max-w-screen-md mt-16 max-md:max-w-full max-md:text-4xl max-md:leading-[54px] max-md:mt-10">
           Boulder Bike
         </div>
-        <div className="text-black text-center text-lg leading-7 max-w-screen-md mt-6 max-md:max-w-full">
+        <div className="text-black text-center text-lg leading-7 max-w-screen-md mt-6 max-md:max-w-full hero-font">
           Browse through exciting photos from the Boulder Bike Tour.
         </div>
         <div className="self-stretch mt-20 max-md:max-w-full">
@@ -75,7 +74,7 @@ const Photo = () => {
         <div className="flex justify-center mt-8">
           {/* Previous Page Button */}
           <button
-            className="mr-4 px-4 py-2 bg-white text-black rounded-full"
+            className="mr-4 px-4 py-2 bg-[#a04008] text-white border-2 border-white rounded-full"
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
           >
@@ -88,8 +87,8 @@ const Photo = () => {
               key={index + 1}
               className={`mx-2 px-4 py-2 rounded-full ${
                 currentPage === index + 1
-                  ? "bg-white text-black"
-                  : "bg-gray-300"
+                  ? "bg-white text-[#a04008] border-2 border-[#a04008]"
+                  : "bg-gray-300 text-[#a04008] border-2 border-[#a04008]"
               }`}
               onClick={() => handlePageChange(index + 1)}
             >
@@ -99,7 +98,7 @@ const Photo = () => {
 
           {/* Next Page Button */}
           <button
-            className="ml-4 px-4 py-2 bg-white text-black rounded-full"
+            className="ml-4 px-4 py-2 bg-[#a04008] text-white border-2 border-white rounded-full"
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
           >

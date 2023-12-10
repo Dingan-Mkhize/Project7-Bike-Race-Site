@@ -9,7 +9,7 @@ const CountdownComponent = () => {
 
   return (
     <div className="text-center">
-      <h2 className="text-3xl font-bold text-white mb-4 italic">Only!</h2>
+      <h2 className="text-3xl hero-font font-bold text-white mb-4 italic">Only!</h2>
       <Countdown
         date={targetDate}
         renderer={({ days, hours, minutes, seconds, completed }) => (
@@ -67,22 +67,22 @@ const Hero = () => {
           BOULDER BIKE RACE
         </h1>
         <div className="flex justify-center items-center">
-          <p className="md:text-3xl sm:text-3xl text-xl italic font-bold py-4">
+          <p className="md:text-3xl sm:text-3xl text-xl italic hero-font font-bold py-4">
             Are you ready for the big
           </p>
           <Typed
-            className="md:text-5xl sm:text-4xl text-xl italic font-bold md:pl-4 pl-2"
-            strings={["RACE!"]}
+            className="md:text-5xl sm:text-4xl text-xl italic font-bold md:pl-4 pl-2 hero-font"
+            strings={["RACE"]}
             typeSpeed={120}
             backSpeed={140}
             loop
           />
         </div>
-        <p className="md:text-2xl text-xl font-bold text-green-700">
+        <p className="md:text-2xl text-xl hero-font font-bold text-green-700">
           Come and join us for an exciting race through the scenic streets of
           Boulder
         </p>
-        <button className="transition duration-300 border-2 border=[#fff] hover:bg-yellow-500 w-[200px] rounded-full font-bold my-6 mx-auto py-3 text-white">
+        <button className="transition duration-300 border-2 border-white hover:bg-yellow-500 w-[200px] rounded-full font-bold my-6 mx-auto py-3 text-white">
           Get Started
         </button>
         <CountdownComponent />
