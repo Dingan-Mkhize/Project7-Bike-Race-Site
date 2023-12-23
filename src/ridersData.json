@@ -1,0 +1,130 @@
+[
+  {
+    "First name": "Dustin",
+    "Last name": "Green",
+    "City of origin": "Hickory Hills",
+    "State of origin": "IL",
+    "Placeholder latitude and longitude": "40.00, -105.35",
+    "image": "/riders/Racer05.jpeg"
+  },
+  {
+    "First name": "Jason",
+    "Last name": "Finn",
+    "City of origin": "Huntington Beach",
+    "State of origin": "CA",
+    "Placeholder latitude and longitude": "39.95, -105.24",
+    "image": "/riders/Racer02.jpeg"
+  },
+  {
+    "First name": "Howard",
+    "Last name": "Thompson",
+    "City of origin": "Hale",
+    "State of origin": "MO",
+    "Placeholder latitude and longitude": "40.06, -105.26",
+    "image": "/riders/Racer03.jpeg"
+  },
+  {
+    "First name": "Maggie",
+    "Last name": "Lantz",
+    "City of origin": "Dublin",
+    "State of origin": "OH",
+    "Placeholder latitude and longitude": "40.03, -105.23",
+    "image": "/riders/FRacer11.png"
+  },
+  {
+    "First name": "Lawrence",
+    "Last name": "Duran",
+    "City of origin": "Fort Myers",
+    "State of origin": "FL",
+    "Placeholder latitude and longitude": "40.04, -105.23",
+    "image": "/riders/Racer04.jpeg"
+  },
+  {
+    "First name": "Irene",
+    "Last name": "Molina",
+    "City of origin": "Tucson",
+    "State of origin": "AZ",
+    "Placeholder latitude and longitude": "39.96, -105.22",
+    "image": "/riders/FRacer12.jpeg"
+  },
+  {
+    "First name": "Nancy",
+    "Last name": "Garner",
+    "City of origin": "Baltimore",
+    "State of origin": "MD",
+    "Placeholder latitude and longitude": "39.98, -105.21",
+    "image": "/riders/FRacer13.jpeg"
+  },
+  {
+    "First name": "Tara",
+    "Last name": "Taylor",
+    "City of origin": "Minneapolis",
+    "State of origin": "MN",
+    "Placeholder latitude and longitude": "40.00, -105.25",
+    "image": "/riders/FRacer14.jpeg"
+  },
+  {
+    "First name": "Alejandro",
+    "Last name": "Smith",
+    "City of origin": "Scarborough",
+    "State of origin": "ME",
+    "Placeholder latitude and longitude": "40.02, -105.26",
+    "image": "/riders/Racer07.jpeg"
+  },
+  {
+    "First name": "Tricia",
+    "Last name": "Renshaw",
+    "City of origin": "Mystic",
+    "State of origin": "CT",
+    "Placeholder latitude and longitude": "40.02, -105.30",
+    "image": "/riders/FRacer20.jpeg"
+  },
+  {
+    "First name": "Travis",
+    "Last name": "Cook",
+    "City of origin": "Twin Lakes",
+    "State of origin": "WI",
+    "Placeholder latitude and longitude": "40.01, -105.20",
+    "image": "/riders/Racer08.jpeg"
+  },
+  {
+    "First name": "Joan",
+    "Last name": "Brooks",
+    "City of origin": "Norfolk",
+    "State of origin": "VA",
+    "Placeholder latitude and longitude": "39.98, -105.24",
+    "image": "/riders/FRacer18.jpeg"
+  },
+  {
+    "First name": "Joseph",
+    "Last name": "Rodgers",
+    "City of origin": "Wayne",
+    "State of origin": "NJ",
+    "Placeholder latitude and longitude": "39.99, -105.25",
+    "image": "/riders/Racer09.jpeg"
+  },
+  {
+    "First name": "Matthew",
+    "Last name": "Gregson",
+    "City of origin": "Brashear",
+    "State of origin": "MO",
+    "Placeholder latitude and longitude": "40.01, -105.29",
+    "image": "/riders/Racer06.jpeg"
+  },
+  {
+    "First name": "Katie",
+    "Last name": "Dunlap",
+    "City of origin": "Marion",
+    "State of origin": "VA",
+    "Placeholder latitude and longitude": "39.97, -105.27",
+    "image": "/riders/FRacer17.png"
+  },
+  {
+    "First name": "Leo",
+    "Last name": "Howard",
+    "City of origin": "Dallas",
+    "State of origin": "TX",
+    "Placeholder latitude and longitude": "39.97, -105.00",
+    "image": "/riders/Racer10.jpeg"
+  }
+]

@@ -2,25 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @font-face {
-  font-family: 'SpritzAndDelicious';
-  src: url('./fonts/SpritzAndDelicious_PERSONAL_USE_ONLY.otf') format('opentype');
+  font-family: "SpritzAndDelicious";
+  src: url("./fonts/SpritzAndDelicious_PERSONAL_USE_ONLY.otf")
+    format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 .hero-font {
-  font-family: 'SpritzAndDelicious', sans-serif;
+  font-family: "SpritzAndDelicious", sans-serif;
 }
 
 .custom-font {
-  font-family: 'AmericanCaptain', sans-serif; /* Use the font family name defined above */
+  font-family: "AmericanCaptain", sans-serif; /* Use the font family name defined above */
 }
 
 .custom-bg {
-  background-color: rgb(160, 64, 8); /* Replace #your-color with your desired color */
+  background-color: rgb(
+    160,
+    64,
+    8
+  ); /* Replace #your-color with your desired color */
 }
 
 /* Add these styles to your global styles or a separate stylesheet */
@@ -39,4 +42,41 @@
   font-weight: bold;
 }
 
+.outline-text-yellow {
+  color: #f59e01; /* Set font color to yellow */
+  text-shadow: -1px -1px 0 #000, /* Top-left shadow */ 1px -1px 0 #000,
+    /* Top-right shadow */ -1px 1px 0 #000,
+    /* Bottom-left shadow */ 1px 1px 0 #000; /* Bottom-right shadow */
+}
 
+.outline-text-white {
+  color: white; /* Set font color to yellow */
+  text-shadow: -1px -1px 0 #000, /* Top-left shadow */ 1px -1px 0 #000,
+    /* Top-right shadow */ -1px 1px 0 #000,
+    /* Bottom-left shadow */ 1px 1px 0 #000; /* Bottom-right shadow */
+}
+
+.outline-text-brown {
+  color: #a04008; /* Set font color to yellow */
+  text-shadow: -1px -1px 0 #000, /* Top-left shadow */ 1px -1px 0 #000,
+    /* Top-right shadow */ -1px 1px 0 #000,
+    /* Bottom-left shadow */ 1px 1px 0 #000; /* Bottom-right shadow */
+}
+
+.leaflet-container {
+  border-radius: 0.75rem; /* Adjust based on your preference */
+}
+
+.bicycle-icon {
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 25px; /* Aligns the emoji vertically */
+  font-size: 24px;
+  width: 30px; 
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
