@@ -10,13 +10,15 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
+    <div className="bg-[#f59e0b]">
       <Navbar />
-      <Hero />
-      <Photo />
-      <Riders />
-      <Locations />
-      <Contest />
+        <Hero />
+        <div className="max-w-[1240px] mx-auto">
+        <Photo />
+        <Riders />
+        <Locations />
+        <Contest />
+        </div>
       <Footer />
     </div>
   );

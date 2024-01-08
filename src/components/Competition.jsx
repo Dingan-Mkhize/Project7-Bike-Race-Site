@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Element } from "react-scroll";
 import SuccessModal from "../components/SuccessModal";
 import ErrorModal from "../components/ErrorModal";
 import bikemountain from "../assets/Bike-Racers-contest.jpg";
@@ -62,6 +63,7 @@ const handleCloseErrorModal = () => {
 };
 
   return (
+    <Element name="competition-section">
     <div className="bg-[#f59e0b] items-stretch flex flex-col justify-center px-16 py-12 max-md:px-5">
       {/* Error Messages */}
       {errorMessages.length > 0 && (
@@ -162,6 +164,7 @@ const handleCloseErrorModal = () => {
         </div>
       </div>
     </div>
+    </Element>
   );
 };
 

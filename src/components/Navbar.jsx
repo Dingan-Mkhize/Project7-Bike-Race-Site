@@ -21,27 +21,27 @@ const Navbar = () => {
       </h1>
       <ul className="outline-text-white hidden md:flex">
         <li className="p-4">
-          <Link to="home-section" smooth={true} duration={500}>
+          <Link to="home-section" smooth={true} duration={500} className="cursor-pointer">
             Home
           </Link>
         </li>
         <li className="p-4">
-          <Link to="photos-section" smooth={true} duration={500}>
+          <Link to="photos-section" smooth={true} duration={500} className="cursor-pointer">
             Photos
           </Link>
         </li>
         <li className="p-4">
-          <Link to="riders-section" smooth={true} duration={500}>
+          <Link to="riders-section" smooth={true} duration={500} className="cursor-pointer">
             Riders
           </Link>
         </li>
         <li className="p-4">
-          <Link to="locations-section" smooth={true} duration={500}>
+          <Link to="locations-section" smooth={true} duration={500} className="cursor-pointer">
             Locations
           </Link>
         </li>
         <li className="p-4">
-          <Link to="competition-section" smooth={true} duration={500}>
+          <Link to="competition-section" smooth={true} duration={500} className="cursor-pointer">
             Competition
           </Link>
         </li>
