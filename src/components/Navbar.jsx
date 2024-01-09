@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../index.css";
 import { Link } from "react-scroll";
-//import BoulderBikeTourLogo from '../assets/BBR-Logo.png';
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
@@ -13,9 +12,6 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white">
-      {/* <img
-          src={BoulderBikeTourLogo}
-          alt="Boulder Bike Tour Logo" /> */}
       <h1 className="outline-text-brown w-full text-4xl font-bold hero-font text-[#a04008]">
         BBT
       </h1>
@@ -65,6 +61,7 @@ const Navbar = () => {
             to="home-section"
             smooth={true}
             duration={500}
+            className="cursor-pointer"
           >
             Home
           </Link>
@@ -75,6 +72,7 @@ const Navbar = () => {
             to="photos-section"
             smooth={true}
             duration={500}
+            className="cursor-pointer"
           >
             Photos
           </Link>
@@ -85,6 +83,7 @@ const Navbar = () => {
             to="riders-section"
             smooth={true}
             duration={500}
+            className="cursor-pointer"
           >
             Riders
           </Link>
@@ -95,6 +94,7 @@ const Navbar = () => {
             to="locations-section"
             smooth={true}
             duration={500}
+            className="cursor-pointer"
           >
             Locations
           </Link>
@@ -105,6 +105,7 @@ const Navbar = () => {
             to="competition-section"
             smooth={true}
             duration={500}
+            className="cursor-pointer"
           >
             Competition
           </Link>

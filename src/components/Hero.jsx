@@ -1,7 +1,6 @@
 import React from "react";
 import "../index.css";
 import Typed from "react-typed";
-//import BoulderBikeTourLogo from '../assets/BBR-Logo.png';
 import backgroundImage from "../assets/Rocky-Mountains.jpg";
 import Countdown from "react-countdown";
 
@@ -69,11 +68,6 @@ const Hero = () => {
   return (
     <div className="text-white" style={backgroundStyles}>
       <div className="max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center">
-        {/* <img
-          src={BoulderBikeTourLogo}
-          alt="Boulder Bike Tour Logo"
-          className="mx-auto my-4"
-        /> */}
         <h1 className="outline-text-yellow md:text-7xl sm:text-6xl text-4xl font-bold md:py-6 hero-font">
           BOULDER BIKE TOUR
         </h1>
@@ -93,9 +87,6 @@ const Hero = () => {
           Come and join us for an exciting race through the scenic streets of
           Boulder
         </p>
-        <button className="transition duration-300 border-2 border-white hover:bg-[#f59e0b] w-[200px] rounded-full font-bold my-6 mx-auto py-3 text-white">
-          Get Started
-        </button>
         <CountdownComponent />
       </div>
     </div>
