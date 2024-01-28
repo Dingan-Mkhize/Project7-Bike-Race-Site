@@ -75,16 +75,6 @@ const Riders = () => {
                       {rider.description}
                     </div>
                   </div>
-                  <button
-                    onClick={() => {
-                      window.location.href = `/locations?rider=${encodeURIComponent(
-                        JSON.stringify(rider)
-                      )}`;
-                    }}
-                    className="transition duration-300 text-black text-lg font-semibold leading-6 whitespace-nowrap items-stretch bg-gray-200 border-2 border-black px-4 py-2 rounded-3xl hover:border-white hover:bg-[#f59e0b] hover:text-white mt-4 self-stretch"
-                  >
-                    Location
-                  </button>
                 </div>
               </div>
             ))}

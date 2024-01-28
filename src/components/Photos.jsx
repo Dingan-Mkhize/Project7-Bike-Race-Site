@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Element } from "react-scroll";
 import bikemountain from "../assets/Bike-racers-mountains-two.jpg";
+import fallbackImage from "../assets/Bike-Racers-fallback.png";
 
 const Photo = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [photos, setPhotos] = useState([]);
-  //const totalPages = 5; 
   const photosPerPage = 5; // Number of photos per page
+  const totalPhotos = 40; // Total number of photos
+  const totalPages = Math.ceil(totalPhotos / photosPerPage); // Calculate total pages
   const startIndex = (currentPage - 1) * photosPerPage;
   const endIndex = startIndex + photosPerPage;
 
@@ -31,7 +33,6 @@ const Photo = () => {
       .catch((error) => console.error("Error fetching photos:", error));
   }, [currentPage]);
 
-  // Add event listeners after each render
   useEffect(() => {
     const images = document.querySelectorAll(".aspect-square img");
     images.forEach((img) => {
@@ -43,7 +44,6 @@ const Photo = () => {
       );
     });
 
-    // Cleanup event listeners when the component unmounts or images change
     return () => {
       images.forEach((img) => {
         img.removeEventListener("load", () =>
@@ -74,15 +74,6 @@ const Photo = () => {
             Once every decade, an exciting, prestigious, and inspiring bike race
             takes place in Colorado at the foot of the Rocky Mountains.
           </div>
-          {/* <div className="flex gap-4 mt-6 mb-3.5 pt-4">
-            <button className="transition duration-300 border-2 border-[#fff] hover:bg-[#f59e0b] w-[200px] rounded-full font-bold px-3 py-3 text-white flex items-center justify-center">
-              Rider Info
-            </button>
-
-            <button className="transition duration-300 border-2 border-[#fff] hover:bg-[#f59e0b] w-[200px] rounded-full font-bold px-3 py-3 text-white flex items-center justify-center">
-              Learn More
-            </button>
-          </div> */}
         </div>
       </div>
 
@@ -107,6 +98,10 @@ const Photo = () => {
                       src={photo.url}
                       alt={photo.title || "Photo"}
                       className="object-cover w-full h-full"
+                      onError={(e) => {
+                        e.target.onerror = null; // Prevents looping
+                        e.target.src = fallbackImage; // Sets the fallback image
+                      }}
                     />
                   ) : (
                     <div>No image available</div>
@@ -132,7 +127,7 @@ const Photo = () => {
           </button>
 
           {/* Page Numbers */}
-          {Array.from({ length: photosPerPage }, (_, index) => (
+          {Array.from({ length: totalPages }, (_, index) => (
             <button
               key={index + 1}
               className={`mx-2 px-4 py-2 rounded-full ${
@@ -149,12 +144,12 @@ const Photo = () => {
           {/* Next Page Button */}
           <button
             className={`mx-2 px-4 py-2 rounded-full ${
-              currentPage === photosPerPage
+              currentPage === totalPages
                 ? "bg-gray-300 text-[#a04008] border-2 border-[#a04008]"
                 : "bg-[#a04008] text-white border-2 border-white"
             }`}
             onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === photosPerPage}
+            disabled={currentPage === totalPages}
           >
             Next
           </button>
