@@ -80,7 +80,7 @@ const Riders = () => {
             ))}
           </div>
 
-          <div className="flex justify-center mt-6 mb-24">
+          <div className="flex flex-wrap justify-center mt-6 mb-24">
             {/* Previous Page Button */}
             <button
               className={`mx-2 px-4 py-2 rounded-full ${

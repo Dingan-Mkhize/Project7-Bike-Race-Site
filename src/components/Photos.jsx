@@ -58,9 +58,9 @@ const Photo = () => {
 
   return (
     <Element name="photos-section">
-      <div className="bg-[#f59e0b] items-stretch flex flex-col justify-center px-10 py-10 max-md:px-5">
+      <div className="bg-[#f59e0b] flex flex-col justify-center px-4 py-10 sm:px-10">
         <div
-          className="flex flex-col bg-cover bg-bottom mt-16 mb-10 pl-16 pr-20 py-12 border-2 border-[#000] items-start max-md:max-w-full max-md:mr-1 max-md:mt-10 max-md:px-5 rounded-3xl"
+          className="flex flex-col bg-cover bg-bottom mt-16 mb-10 pl-4 pr-4 py-12 border-2 border-[#000] items-start rounded-3xl sm:pl-16 sm:pr-20 sm:mx-auto"
           style={{
             backgroundImage: `url(${bikemountain})`,
             backgroundSize: "cover",
@@ -112,7 +112,7 @@ const Photo = () => {
           </div>
         </div>
 
-        <div className="flex justify-center mt-8 mb-32">
+        <div className="flex flex-wrap justify-center mt-8 mb-32">
           {/* Previous Page Button */}
           <button
             className={`mx-2 px-4 py-2 rounded-full ${

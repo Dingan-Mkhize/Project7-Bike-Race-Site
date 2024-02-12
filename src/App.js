@@ -12,13 +12,13 @@ function App() {
   return (
     <div className="bg-[#f59e0b]">
       <Navbar />
-        <Hero />
-        <div className="max-w-[1240px] mx-auto">
+      <Hero />
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         <Photo />
         <Riders />
         <Locations />
         <Contest />
-        </div>
+      </div>
       <Footer />
     </div>
   );
