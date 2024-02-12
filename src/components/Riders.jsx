@@ -1,11 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Element } from "react-scroll";
 import ridersData from "../ridersData.json";
 import bikemountain from "../assets/Bike-racers-mountains-one.jpg";
 
 const Riders = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 3;
+  // Start with default itemsPerPage
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+
+  useEffect(() => {
+    // Function to dynamically adjust items per page based on viewport width
+    const updateItemsPerPage = () => {
+      if (window.innerWidth < 768) {
+        // Tailwind's "sm" breakpoint
+        setItemsPerPage(1); // Show only one item on mobile
+      } else {
+        setItemsPerPage(3); // Show three items on larger screens
+      }
+    };
+
+    // Call the function on component mount and add listener for resize events
+    updateItemsPerPage();
+    window.addEventListener("resize", updateItemsPerPage);
+
+    // Cleanup listener on component unmount
+    return () => window.removeEventListener("resize", updateItemsPerPage);
+  }, []);
+
   const totalPages = Math.ceil(ridersData.length / itemsPerPage);
 
   const getPageRiders = (page) => {
@@ -13,10 +34,6 @@ const Riders = () => {
     const endIndex = startIndex + itemsPerPage;
     return ridersData.slice(startIndex, endIndex);
   };
-
-  // const scrollToTop = () => {
-  //   scroll.scrollToTop({ duration: 500, smooth: "easeInOutQuart" });
-  // };
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -98,7 +115,7 @@ const Riders = () => {
             {Array.from({ length: totalPages }, (_, index) => (
               <button
                 key={index + 1}
-                className={`mx-2 px-4 py-2 rounded-full ${
+                className={`hidden sm:inline-block mx-2 px-4 py-2 rounded-full ${
                   currentPage === index + 1
                     ? "bg-white text-[#a04008] border-2 border-[#a04008]"
                     : "bg-gray-300 text-[#a04008] border-2 border-[#a04008]"

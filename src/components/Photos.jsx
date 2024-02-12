@@ -7,15 +7,21 @@ import fallbackImage from "../assets/Bike-Racers-fallback.png";
 const Photo = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [photos, setPhotos] = useState([]);
-  const photosPerPage = 5; // Number of photos per page
-  const totalPhotos = 40; // Total number of photos
-  const totalPages = Math.ceil(totalPhotos / photosPerPage); // Calculate total pages
-  const startIndex = (currentPage - 1) * photosPerPage;
-  const endIndex = startIndex + photosPerPage;
+  // Initialize photosPerPage based on window width
+  const initialPhotosPerPage = window.innerWidth < 768 ? 1 : 5;
+  const [photosPerPage, setPhotosPerPage] = useState(initialPhotosPerPage);
+  const totalPhotos = 40; // Assuming this is static, but could also be dynamic based on data
+  const totalPages = Math.ceil(totalPhotos / photosPerPage);
 
-  const handlePageChange = (newPage) => {
-    setCurrentPage(newPage);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      const newPhotosPerPage = window.innerWidth < 768 ? 1 : 5;
+      setPhotosPerPage(newPhotosPerPage);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     axios
@@ -27,44 +33,27 @@ const Photo = () => {
       })
       .then((response) => {
         const data = response.data;
-        console.log("Full API response:", response);
         setPhotos(data);
       })
       .catch((error) => console.error("Error fetching photos:", error));
-  }, [currentPage]);
+  }, [currentPage, photosPerPage]); // Add photosPerPage as a dependency
 
-  useEffect(() => {
-    const images = document.querySelectorAll(".aspect-square img");
-    images.forEach((img) => {
-      img.addEventListener("load", () =>
-        console.log("Image loaded successfully:", img)
-      );
-      img.addEventListener("error", () =>
-        console.error("Error loading image:", img)
-      );
-    });
+  const startIndex = (currentPage - 1) * photosPerPage;
+  const endIndex = startIndex + photosPerPage;
 
-    return () => {
-      images.forEach((img) => {
-        img.removeEventListener("load", () =>
-          console.log("Image loaded successfully:", img)
-        );
-        img.removeEventListener("error", () =>
-          console.error("Error loading image:", img)
-        );
-      });
-    };
-  }, [photos]);
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
 
   return (
     <Element name="photos-section">
-      <div className="bg-[#f59e0b] flex flex-col justify-center px-4 py-10 sm:px-10">
+      <div className="bg-[#f59e0b] items-stretch flex flex-col justify-center px-16 max-md:px-5">
         <div
-          className="flex flex-col bg-cover bg-bottom mt-16 mb-10 pl-4 pr-4 py-12 border-2 border-[#000] items-start rounded-3xl sm:pl-16 sm:pr-20 sm:mx-auto"
+          className="flex flex-col bg-cover bg-bottom mt-16 mb-10 pl-16 pr-20 py-12 border-2 border-[#000] items-start max-md:max-w-full max-md:mr-1 max-md:mt-10 max-md:px-5 rounded-3xl"
           style={{
             backgroundImage: `url(${bikemountain})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center 75%",
           }}
         >
           <div className="text-black text-5xl font-bold hero-font leading-[58px] w-[768px] max-w-full mt-3.5 max-md:text-4xl max-md:leading-[54px]">
@@ -130,7 +119,7 @@ const Photo = () => {
           {Array.from({ length: totalPages }, (_, index) => (
             <button
               key={index + 1}
-              className={`mx-2 px-4 py-2 rounded-full ${
+              className={`hidden sm:inline-block mx-2 px-4 py-2 rounded-full ${
                 currentPage === index + 1
                   ? "bg-white text-[#a04008] border-2 border-[#a04008]"
                   : "bg-gray-300 text-[#a04008] border-2 border-[#a04008]"

@@ -10,10 +10,10 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="bg-[#f59e0b]">
+    <div className="bg-[#f59e0b] overflow-x-hidden">
       <Navbar />
       <Hero />
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         <Photo />
         <Riders />
         <Locations />
