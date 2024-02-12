@@ -21,6 +21,15 @@ const Competition = () => {
 
     setErrorMessages([]); // Clear existing errors on new submission
 
+    // Client-side validation for the slogan field
+    if (!slogan.trim()) {
+      setErrorMessages(["Slogan cannot be blank."]);
+      setShowErrorModal(true);
+      return; // Stop the submission if the slogan is blank
+    }
+
+    if (isSubmitted) return;
+
     try {
       const response = await axios.post("http://localhost:3000/submissions", {
         first_name: firstName,
@@ -35,7 +44,7 @@ const Competition = () => {
         setLastName("");
         setEmail("");
         setSlogan("");
-        setIsSubmitted(true);
+        setIsSubmitted(false);
       }
     } catch (error) {
       console.error("Submission error:", error);
@@ -51,7 +60,7 @@ const Competition = () => {
         setShowErrorModal(true); // Open the error modal
       }
     }
-};
+  };
 
 const handleCloseModal = () => {
   setShowSuccessModal(false);
@@ -143,6 +152,7 @@ const handleCloseErrorModal = () => {
               className="text-neutral-600 text-base leading-6 items-stretch self-center border bg-white w-[560px] max-w-full mt-2 pt-3 pb-28 px-3 border-solid border-black max-md:max-w-full max-md:pb-10 rounded-3xl"
             />
             <button
+              type="submit"
               className="transition duration-300 border-white bg-[#a04008] text-white border-2 hover:bg-[#f59e0b] w-[200px] rounded-full font-bold my-6 mx-auto py-3"
               onClick={handleSubmit}
               disabled={isSubmitted}
