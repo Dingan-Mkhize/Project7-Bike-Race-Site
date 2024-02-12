@@ -1,5 +1,4 @@
 import React from "react";
-
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Photo from "./components/Photos";
@@ -7,6 +6,7 @@ import Riders from "./components/Riders";
 import Locations from "./components/Locations";
 import Contest from "./components/Competition";
 import Footer from "./components/Footer";
+import BackToTopButton from "./components/BackToTopButton";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Locations />
         <Contest />
       </div>
+      <BackToTopButton />
       <Footer />
     </div>
   );
