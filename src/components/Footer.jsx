@@ -3,12 +3,12 @@ import * as React from "react";
 const Footer = () => {
   return (
     <div className="items-center bg-[#f59e0b] flex flex-col px-16 py-12 max-md:px-5">
-      <img
-        loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/c92ed8233e3be20e8bd7aa70f4c7886275bb33f24398b496bbb29575255803ca?apiKey=7eeb7dfa431b4f298828edabf075866d&"
-        alt="placeholder"
-        className="aspect-[2.33] object-contain object-center w-[63px] overflow-hidden max-w-full mt-8"
-      />
+      <h1
+        className="flex justify-center outline-text-brown w-full text-4xl font-bold hero-font text-[#a04008]aspect-[2.33] object-contain object-center
+      overflow-hidden max-w-full mt-8"
+      >
+        BBT
+      </h1>
       <div className="items-stretch flex justify-between gap-5 mt-8 max-md:justify-center hero-font">
         <div className="text-black text-base font-semibold leading-6 whitespace-nowrap">
           Contact
