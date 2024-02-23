@@ -16,11 +16,11 @@ const Navbar = () => {
         BBT
       </h1>
       <ul className="outline-text-white hidden md:flex">
-        <li className="p-4">
+        {/* <li className="p-4">
           <Link to="home-section" smooth={true} duration={500} className="cursor-pointer">
             Home
           </Link>
-        </li>
+        </li> */}
         <li className="p-4">
           <Link to="photos-section" smooth={true} duration={500} className="cursor-pointer">
             Photos

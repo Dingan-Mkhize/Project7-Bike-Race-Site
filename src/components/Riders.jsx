@@ -6,7 +6,7 @@ import bikemountain from "../assets/Bike-racers-mountains-one.jpg";
 const Riders = () => {
   const [currentPage, setCurrentPage] = useState(1);
   // Start with default itemsPerPage
-  const [itemsPerPage, setItemsPerPage] = useState(3);
+  const [itemsPerPage, setItemsPerPage] = useState(4);
 
   useEffect(() => {
     // Function to dynamically adjust items per page based on viewport width
@@ -15,7 +15,7 @@ const Riders = () => {
         // Tailwind's "sm" breakpoint
         setItemsPerPage(1); // Show only one item on mobile
       } else {
-        setItemsPerPage(3); // Show three items on larger screens
+        setItemsPerPage(4); 
       }
     };
 

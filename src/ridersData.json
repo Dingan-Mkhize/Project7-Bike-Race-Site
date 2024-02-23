@@ -126,5 +126,37 @@
     "State of origin": "TX",
     "Placeholder latitude and longitude": "39.97, -105.00",
     "image": "/riders/Racer10.jpeg"
+  },
+  {
+    "First name": "Maria",
+    "Last name": "Baisden",
+    "City of origin": "Raleigh",
+    "State of origin": "NC",
+    "Placeholder latitude and longitude": "40.00, -105.29",
+    "image": "/riders/FRacer21.png"
+  },
+  {
+    "First name": "Sandy",
+    "Last name": "Townsend",
+    "City of origin": "Newport",
+    "State of origin": "PA",
+    "Placeholder latitude and longitude": "40.05, -105.30",
+    "image": "/riders/FRacer22.png"
+  },
+  {
+    "First name": "Melinda",
+    "Last name": "Stephenson",
+    "City of origin": "Kahului",
+    "State of origin": "HI",
+    "Placeholder latitude and longitude": "39.99, -105.31",
+    "image": "/riders/FRacer23.png"
+  },
+  {
+    "First name": "Jason",
+    "Last name": "Nichols",
+    "City of origin": "Alexandria",
+    "State of origin": "VA",
+    "Placeholder latitude and longitude": "40.01, -105.32",
+    "image": "/riders/Racer11.png"
   }
 ]

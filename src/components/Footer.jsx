@@ -10,9 +10,9 @@ const Footer = () => {
         BBT
       </h1>
       <div className="items-stretch flex justify-between gap-5 mt-8 max-md:justify-center hero-font">
-        <div className="text-black text-base font-semibold leading-6 whitespace-nowrap">
+        {/* <div className="text-black text-base font-semibold leading-6 whitespace-nowrap">
           Contact
-        </div>
+        </div> */}
         <div className="text-black text-base font-semibold leading-6">FAQ</div>
         <div className="text-black text-base font-semibold leading-6">
           Support
