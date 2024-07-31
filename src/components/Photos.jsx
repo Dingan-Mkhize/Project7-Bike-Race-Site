@@ -25,12 +25,15 @@ const Photo = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/photos.json?page=${currentPage}`, {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      })
+      .get(
+        `${process.env.REACT_APP_BACKEND_URL}/photos.json?page=${currentPage}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        }
+      )
       .then((response) => {
         const data = response.data;
         setPhotos(data);
