@@ -5,7 +5,7 @@ import backgroundImage from "../assets/Rocky-Mountains.jpg";
 import Countdown from "react-countdown";
 
 const CountdownComponent = () => {
-  const targetDate = new Date("2024-04-01T23:59:59"); // Replace with your target date
+  const targetDate = new Date("2025-04-01T23:59:59"); // Replace with your target date
 
   return (
     <div className="text-center">

@@ -97,6 +97,7 @@ const Riders = () => {
             ))}
           </div>
 
+              {/* Pagination */}
           <div className="flex flex-wrap justify-center mt-6 mb-24">
             {/* Previous Page Button */}
             <button
